@@ -1,0 +1,69 @@
+@import "./_colors"
+
+@mixin typography($family: iranyekan-light, $size:16px, $align:right, $weight:normal, $line-height:25px, $color:$color-text-dark)
+    font-family: $family
+    font-size: $size
+    font-weight: $weight
+    line-height: $line-height
+    color: $color
+    text-align: $align
+
+@mixin button($top-left:30px, $top-right:30px, $bottom-right:30px, $bottom-left:30px, $border-width:2px, $border-style:solid, $height:60px)
+    @include border-radius($top-left,$top-right,$bottom-right,$bottom-left)
+    @include box-shadow(0px, 0px, 0px, $color-white, 0)
+    border-style: $border-style
+    border-width: $border-width
+    height: $height
+    box-shadow: none !important
+
+@mixin button-mode($background-color: $color-primary, $border-color: $color-primary)
+    background: $background-color !important
+    border-color: $border-color !important
+
+
+@mixin border($top: 0,$right: 0,$bottom: 0,$left: 0,$style: solid, $color: $color-border-light)
+    border-top: $top 
+    border-right: $right 
+    border-bottom: $bottom 
+    border-left: $left
+    border-style: $style
+    border-color: $color
+    
+
+@mixin border-radius($top-left:0, $top-right:0, $bottom-right:0, $bottom-left:0)
+    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left
+    -moz-border-radius: $top-left $top-right $bottom-right $bottom-left
+    -ms-border-radius: $top-left $top-right $bottom-right $bottom-left
+    border-radius: $top-left $top-right $bottom-right $bottom-left    
+
+
+@mixin box-shadow($x: 0px, $y: 7px, $blur: 15px, $color-hex: $color-black, $alpha: .2)
+    @include rgba($color-hex, $alpha)
+    -webkit-box-shadow: $x $y $blur rgba(red($color-hex), green($color-hex), blue($color-hex), $alpha) !important
+    -moz-box-shadow: $x $y $blur rgba(red($color-hex), green($color-hex), blue($color-hex), $alpha) !important
+    box-shadow: $x $y $blur rgba(red($color-hex), green($color-hex), blue($color-hex), $alpha) !important
+   
+@mixin rgba($color-hex, $alpha)
+    rgba: rgba(red($color-hex), green($color-hex), blue($color-hex), $alpha)
+
+
+// @mixin background-image($image-urls, $sizes: auto, $positions: right center, $repeats: no-repeat, $attachment:scroll, $origin:padding-box, $clip:border-box)
+//     background-image: $image-urls !important
+//     background-size: $sizes
+//     background-position: $positions !important
+//     background-repeat: $repeats !important
+//     background-attachment: $attachment
+//     background-origin: $origin
+//     background-clip: $clip
+
+
+
+
+
+
+
+
+
+
+
+    

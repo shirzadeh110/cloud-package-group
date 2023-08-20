@@ -1,0 +1,43 @@
+@import "../mixins"
+@import "../_colors"
+@import "../../assets/_fonts"
+    
+.btn-primary 
+    margin-top: 15px
+    height: 38px
+    @include border-radius($top-left:50px, $top-right:50px, $bottom-right:50px, $bottom-left:50px)
+    width: 100%
+    border: none
+    color: $color-white
+    position: relative
+    font-weight: bold
+    cursor: pointer
+    background: rgb(115,191,67)
+    background: linear-gradient(90deg, rgba(115,191,67,0.7343312324929971) 0%, rgba(0,173,76,1) 100%, rgba(9,9,121,1) 100%, rgba(2,0,36,1) 100%)
+
+    div
+        width: 28px
+        height: 28px
+        border-radius: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        right: 10px
+        top: 6px
+        font-family: ShabnamLight
+
+        &.active 
+          background-color: #029c45
+
+        &.notActive
+           background-color: $color-white
+
+
+
+        img
+            width: 14px
+            height: 12px
+
+       
+    
